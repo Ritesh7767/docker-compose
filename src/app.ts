@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 (
     async () => {
         try {
-            const connection = await mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
+            const connection = await mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)   
             console.log("Connection successfull at host:", connection.connection.host)
         } catch (error) {
             console.error("Failed connecting database", error)

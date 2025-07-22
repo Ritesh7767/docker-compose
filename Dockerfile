@@ -5,7 +5,10 @@ WORKDIR /app
 COPY package.* .
 RUN npm i
 
-COPY . . 
+COPY ./prisma ./prisma
+RUN npx prisma generate
+
+COPY . .
 RUN npm run build
 
 EXPOSE 3000
