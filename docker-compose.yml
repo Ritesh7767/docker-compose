@@ -27,7 +27,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=postgresql://ritesh7767:ritesh7767@postgres:5432
+      - DATABASE_URL=postgresql://<username>:<password>@postgres:5432
       - DB_URL=mongodb://mongodbcontainer:27017
       - DB_NAME=sampledata
 volumes:
